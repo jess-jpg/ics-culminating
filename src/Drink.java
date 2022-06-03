@@ -4,9 +4,9 @@
 public class Drink extends MenuItem {
    private String sugarLevel; //none less reg extra
    private boolean ice; 
-   private String size;
+   private char size;
    
-   public Drink (String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, String size){
+   public Drink (String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size){
       super (name, price, hot, quantity);
       this.sugarLevel = sugarLevel;
       this.ice = ice;
@@ -18,7 +18,7 @@ public class Drink extends MenuItem {
    public boolean getIce(){
       return this.ice;
    }
-   public String getSize(){
+   public char getSize(){
       return this.size;
    }
 }
