@@ -10,7 +10,13 @@ public class Drink extends MenuItem {
       super (name, price, hot, quantity);
       this.sugarLevel = sugarLevel;
       this.ice = ice;
-      this.size = size;
+
+      // if size input is not s/m/l, size defaults to medium
+      if (size != 's' && size != 'm' && size != 'l') {
+         this.size = 'm';
+      } else {
+         this.size = size;
+      }
    }
    public String getSugarLevel(){
       return this.sugarLevel;
