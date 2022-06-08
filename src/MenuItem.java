@@ -12,6 +12,14 @@ public class MenuItem {
    private int quantity;
    
    /** Constructors */
+   //defualt constructs an order as x1 if unspecified
+   public MenuItem (String name, double price, boolean hot){
+      this.name = name;
+      this.price = price;
+      this.hot = hot;
+      this.quantity = 1;
+   }
+   
    public MenuItem (String name, double price, boolean hot, int quantity){
       this.name = name;
       this.price = price;
