@@ -7,9 +7,8 @@ public class Pasta extends MenuItem {
    private String pastaShape;
    
    //unspecified sauce amount defaults to regular
-   public Pasta (String name, double price, int quantity, String sauce, String protein, String pastaShape){
-      super (name, price, hot, quantity);
-      this.hot = true;
+   public Pasta (String name, double price, boolean hot, int quantity, String sauce, String protein, String pastaShape){
+      super (name, price, true, quantity);
       this.sauce = sauce;
       this.sauceAmount = "Regluar";
       this.protein = protein;
@@ -29,9 +28,8 @@ public class Pasta extends MenuItem {
    
    }
    
-   public Pasta (String name, double price, int quantity, String sauce, String sauceAmount, String protein, String pastaShape){
-      super (name, price, hot, quantity);
-      this.hot = true;
+   public Pasta (String name, double price, boolean hot, int quantity, String sauce, String sauceAmount, String protein, String pastaShape){
+      super (name, price, true, quantity);
       this.sauce = sauce;
       this.sauceAmount = sauceAmount;
       this.protein = protein;
