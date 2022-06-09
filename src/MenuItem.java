@@ -8,22 +8,19 @@ public class MenuItem {
    /** Attributes */
    private String name;
    private double price;
-   private boolean hot;
    private int quantity;
    
    /** Constructors */
    //defualt constructs an order as x1 if unspecified
-   public MenuItem (String name, double price, boolean hot){
+   public MenuItem (String name, double price){
       this.name = name;
       this.price = price;
-      this.hot = hot;
       this.quantity = 1;
    }
    
-   public MenuItem (String name, double price, boolean hot, int quantity){
+   public MenuItem (String name, double price, int quantity){
       this.name = name;
       this.price = price;
-      this.hot = hot;
       this.quantity = quantity;
    }
    
@@ -33,9 +30,6 @@ public class MenuItem {
    }
    public double getPrice(){
       return this.price;
-   }
-   public boolean isHot(){
-      return this.hot;
    }
    public int getQuantity(){
       return this.quantity;
