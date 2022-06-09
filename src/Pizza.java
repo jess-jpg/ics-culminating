@@ -38,7 +38,7 @@ public class Pizza extends MenuItem {
      * Description: Creates a default pizza: one medium cheese pizza. no additional toppings
      */
     public Pizza() {
-        super("Cheese Pizza", 8, true, 1); // $8 for one medium cheese pizza. all pizza must be hot (why would u eat cold pizza??)
+        super("Cheese Pizza", 16, 1); // $8 for one medium cheese pizza.
         this.flavour = "cheese";
         this.crust = "normal";
         this.size = "medium";
@@ -58,7 +58,7 @@ public class Pizza extends MenuItem {
      * @param size size of pizza
      */
     public Pizza(String name, double price, int quantity, String flavour, String crust, String size) {
-        super(name, price, true, quantity); // pizza is always hot
+        super(name, price, quantity); // constructs from MenuItem superclass
 
         // no extra toppings
         this.extraTopping1 = "none";
@@ -99,7 +99,7 @@ public class Pizza extends MenuItem {
      * @param extraTopping1 extra topping #1 on pizza
      */
     public Pizza(String name, double price, int quantity, String flavour, String crust, String size, String extraTopping1) {
-        super(name, price, true, quantity); // pizza is always hot
+        super(name, price, quantity); // constructs from MenuItem superclass
 
         // extra toppings
         this.extraTopping1 = extraTopping1;
@@ -141,7 +141,7 @@ public class Pizza extends MenuItem {
      * @param extraTopping2 extra topping #2 on pizza
      */
     public Pizza(String name, double price, int quantity, String flavour, String crust, String size, String extraTopping1, String extraTopping2) {
-        super(name, price, true, quantity); // pizza is always hot
+        super(name, price, quantity); // constructs from MenuItem superclass
 
         // extra toppings
         this.extraTopping1 = extraTopping1;
@@ -184,7 +184,7 @@ public class Pizza extends MenuItem {
      * @param extraTopping3 extra topping #3 on pizza
      */
     public Pizza(String name, double price, int quantity, String flavour, String crust, String size, String extraTopping1, String extraTopping2, String extraTopping3) {
-        super(name, price, true, quantity); // pizza is always hot
+        super(name, price, quantity); // constructs from MenuItem superclass
 
         // extra toppings
         this.extraTopping1 = extraTopping1;
