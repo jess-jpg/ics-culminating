@@ -28,7 +28,7 @@ public class BubbleTea extends Drink {
 
     /**
      * Name: BubbleTea
-     * Description: Creates a default bubble tea: Original Milk Tea flavour and no toppings
+     * Description: Creates a default bubble tea: Original flavour and no toppings
      * @param name name of bubble tea
      * @param price price of bubble tea
      * @param hot temperature of bubble tea
@@ -39,7 +39,7 @@ public class BubbleTea extends Drink {
      */
     public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size) {
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
-        this.flavour = "Original Milk Tea";
+        this.flavour = "Original";
         this.topping = "None";
     }
 
@@ -57,6 +57,7 @@ public class BubbleTea extends Drink {
      * @param topping toppings in bubble tea
      */
     public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size, String flavour, String topping) {
+
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
         this.flavour = flavour;
         this.topping = topping;
