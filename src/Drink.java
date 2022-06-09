@@ -10,6 +10,7 @@ public class Drink extends MenuItem {
    public Drink (String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size){
       super (name, price, quantity);
       this.sugarLevel = sugarLevel;
+      this.hot = hot;
       if (hot = false){
          this.ice = ice; // even if ice is false you can still have a cold drink without ice
       }else{
@@ -22,6 +23,9 @@ public class Drink extends MenuItem {
    }
    public boolean getIce(){
       return this.ice;
+   }
+   public boolean getHot() {
+      return this.hot;
    }
    public char getSize(){
       return this.size;
