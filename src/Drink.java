@@ -5,18 +5,17 @@ public class Drink extends MenuItem {
    private String sugarLevel; //none less reg extra
    private boolean ice; 
    private char size;
+   private boolean hot;
    
    public Drink (String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size){
-      super (name, price, hot, quantity);
+      super (name, price, quantity);
       this.sugarLevel = sugarLevel;
-      this.ice = ice;
-
-      // if size input is not s/m/l, size defaults to medium
-      if (size != 's' && size != 'm' && size != 'l') {
-         this.size = 'm';
-      } else {
-         this.size = size;
+      if (hot = false){
+         this.ice = ice; // even if ice is false you can still have a cold drink without ice
+      }else{
+         this.ice = false; //can't add ice to a hot drink
       }
+      this.size = size;
    }
    public String getSugarLevel(){
       return this.sugarLevel;
