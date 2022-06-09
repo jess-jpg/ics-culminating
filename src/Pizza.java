@@ -6,6 +6,7 @@
  * - size (slice, small, medium, large , x-large)
  * - toppings. up to 3!
  * - quantity bought
+ * doc: https://docs.google.com/document/d/16ZgsrNlRkXmWFkHTEPmhlCGocNgx0-H4AAG2QmCvUXI/edit?usp=sharing
  * Course: ICS4U
  * Date: June 06 2022
  * @author Jessica Lu
@@ -273,4 +274,13 @@ public class Pizza extends MenuItem {
     // none
     /* other methods */
     // none
+
+    // testing main method!!
+    // runs everything in here (all constructors, accessors)
+    public static void main(String[] args) {
+        Pizza pizza1 = new Pizza(); // creates a default pizza
+
+        // creates a large pepperoni pizza with no extra toppings
+        Pizza pizza2 = new Pizza("Pepperoni Pizza", 17, 1, "pepperoni", "stuffed", "large");
+    }
 }

@@ -28,7 +28,7 @@ public class BubbleTea extends Drink {
 
     /**
      * Name: BubbleTea
-     * Description: Creates a default bubble tea: one iced medium Original flavour with tapioca. reg sugar, yes ice
+     * Description: Creates a default bubble tea: one iced medium Original flavour with tapioca. reg sugar
      */
     public BubbleTea() {
         super("Original Milk Tea with Tapioca", 5, false, 1, "reg", true, 'm'); // Drink constructor
