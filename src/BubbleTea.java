@@ -5,7 +5,7 @@
  * - toppings
  * - temperature (hot/cold)
  * - sugar level (0-100%)
- * - ice level (0-100%)
+ * - ice level (true/false)
  * - drink size (s/m/l)
  * - quantity bought
  * Course: ICS4U
@@ -28,7 +28,17 @@ public class BubbleTea extends Drink {
 
     /**
      * Name: BubbleTea
-     * Description: Creates a default bubble tea: Original flavour and no toppings
+     * Description: Creates a default bubble tea: one iced medium Original flavour with tapioca. reg sugar, yes ice
+     */
+    public BubbleTea() {
+        super("Original Milk Tea with Tapioca", 6, false, 1, "reg", true, 'm'); // Drink constructor
+        this.flavour = "original";
+        this.topping = "tapioca";
+    }
+
+    /**
+     * Name: BubbleTea
+     * Description: Creates a bubble tea with customized flavour, no topping
      * @param name name of bubble tea
      * @param price price of bubble tea
      * @param hot temperature of bubble tea
@@ -36,11 +46,12 @@ public class BubbleTea extends Drink {
      * @param sugarLevel sugar level of bubble tea (none, less, reg, extra)
      * @param ice if bubble tea has ice in it (true/false)
      * @param size size of bubble tea
+     * @param flavour flavour of bubble tea
      */
-    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size) {
+    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size, String flavour) {
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
-        this.flavour = "Original";
-        this.topping = "None";
+        this.flavour = flavour;
+        this.topping = "none";
     }
 
     /**
@@ -57,7 +68,6 @@ public class BubbleTea extends Drink {
      * @param topping toppings in bubble tea
      */
     public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size, String flavour, String topping) {
-
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
         this.flavour = flavour;
         this.topping = topping;
