@@ -67,21 +67,21 @@ public class Pizza extends MenuItem {
         this.extraTopping3 = "none";
 
         // flavour must be: cheese, pepperoni, vegetarian, hawaiian, margherita
-        if (flavour.toLowerCase().equals("cheese") || flavour.toLowerCase().equals("pepperoni") || flavour.toLowerCase().equals("vegetarian") || flavour.toLowerCase().equals("hawaiian") || flavour.toLowerCase().equals("margherita")) {
+        if (flavour.equalsIgnoreCase("cheese") || flavour.equalsIgnoreCase("pepperoni") || flavour.equalsIgnoreCase("vegetarian") || flavour.equalsIgnoreCase("hawaiian") || flavour.equalsIgnoreCase("margherita")) {
             this.flavour = flavour;
         } else { // if not, flavour defaults to cheese
             this.flavour = "cheese";
         }
 
         // crust must be: thin, normal, stuffed
-        if (crust.toLowerCase().equals("thin") || crust.toLowerCase().equals("regular") || crust.toLowerCase().equals("stuffed")) {
+        if (crust.equalsIgnoreCase("thin") || crust.equalsIgnoreCase("regular") || crust.equalsIgnoreCase("stuffed")) {
             this.crust = crust;
         } else { // if not, crust defaults to regular
             this.crust = "regular";
         }
 
         // size must be: slice, small, medium, large , x-large
-        if (size.toLowerCase().equals("slice") || size.toLowerCase().equals("small") || size.toLowerCase().equals("medium") || size.toLowerCase().equals("large") || size.toLowerCase().equals("x-large")) {
+        if (size.equalsIgnoreCase("slice") || size.equalsIgnoreCase("small") || size.equalsIgnoreCase("medium") || size.equalsIgnoreCase("large") || size.equalsIgnoreCase("x-large")) {
             this.size = size;
         } else { // if not, size defaults to medium
             this.size = "medium";
@@ -108,21 +108,21 @@ public class Pizza extends MenuItem {
         this.extraTopping3 = "none";
 
         // flavour must be: cheese, pepperoni, vegetarian, hawaiian, margherita
-        if (flavour.toLowerCase().equals("cheese") || flavour.toLowerCase().equals("pepperoni") || flavour.toLowerCase().equals("vegetarian") || flavour.toLowerCase().equals("hawaiian") || flavour.toLowerCase().equals("margherita")) {
+        if (flavour.equalsIgnoreCase("cheese") || flavour.equalsIgnoreCase("pepperoni") || flavour.equalsIgnoreCase("vegetarian") || flavour.equalsIgnoreCase("hawaiian") || flavour.equalsIgnoreCase("margherita")) {
             this.flavour = flavour;
         } else { // if not, flavour defaults to cheese
             this.flavour = "cheese";
         }
 
         // crust must be: thin, normal, stuffed
-        if (crust.toLowerCase().equals("thin") || crust.toLowerCase().equals("regular") || crust.toLowerCase().equals("stuffed")) {
+        if (crust.equalsIgnoreCase("thin") || crust.equalsIgnoreCase("regular") || crust.equalsIgnoreCase("stuffed")) {
             this.crust = crust;
         } else { // if not, crust defaults to regular
             this.crust = "regular";
         }
 
         // size must be: slice, small, medium, large , x-large
-        if (size.toLowerCase().equals("slice") || size.toLowerCase().equals("small") || size.toLowerCase().equals("medium") || size.toLowerCase().equals("large") || size.toLowerCase().equals("x-large")) {
+        if (size.equalsIgnoreCase("slice") || size.equalsIgnoreCase("small") || size.equalsIgnoreCase("medium") || size.equalsIgnoreCase("large") || size.equalsIgnoreCase("x-large")) {
             this.size = size;
         } else { // if not, size defaults to medium
             this.size = "medium";
@@ -150,21 +150,21 @@ public class Pizza extends MenuItem {
         this.extraTopping3 = "none";
 
         // flavour must be: cheese, pepperoni, vegetarian, hawaiian, margherita
-        if (flavour.toLowerCase().equals("cheese") || flavour.toLowerCase().equals("pepperoni") || flavour.toLowerCase().equals("vegetarian") || flavour.toLowerCase().equals("hawaiian") || flavour.toLowerCase().equals("margherita")) {
+        if (flavour.equalsIgnoreCase("cheese") || flavour.equalsIgnoreCase("pepperoni") || flavour.equalsIgnoreCase("vegetarian") || flavour.equalsIgnoreCase("hawaiian") || flavour.equalsIgnoreCase("margherita")) {
             this.flavour = flavour;
         } else { // if not, flavour defaults to cheese
             this.flavour = "cheese";
         }
 
         // crust must be: thin, normal, stuffed
-        if (crust.toLowerCase().equals("thin") || crust.toLowerCase().equals("regular") || crust.toLowerCase().equals("stuffed")) {
+        if (crust.equalsIgnoreCase("thin") || crust.equalsIgnoreCase("regular") || crust.equalsIgnoreCase("stuffed")) {
             this.crust = crust;
         } else { // if not, crust defaults to regular
             this.crust = "regular";
         }
 
         // size must be: slice, small, medium, large , x-large
-        if (size.toLowerCase().equals("slice") || size.toLowerCase().equals("small") || size.toLowerCase().equals("medium") || size.toLowerCase().equals("large") || size.toLowerCase().equals("x-large")) {
+        if (size.equalsIgnoreCase("slice") || size.equalsIgnoreCase("small") || size.equalsIgnoreCase("medium") || size.equalsIgnoreCase("large") || size.equalsIgnoreCase("x-large")) {
             this.size = size;
         } else { // if not, size defaults to medium
             this.size = "medium";
@@ -193,21 +193,21 @@ public class Pizza extends MenuItem {
         this.extraTopping3 = extraTopping3;
 
         // flavour must be: cheese, pepperoni, vegetarian, hawaiian, margherita
-        if (flavour.toLowerCase().equals("cheese") || flavour.toLowerCase().equals("pepperoni") || flavour.toLowerCase().equals("vegetarian") || flavour.toLowerCase().equals("hawaiian") || flavour.toLowerCase().equals("margherita")) {
+        if (flavour.equalsIgnoreCase("cheese") || flavour.equalsIgnoreCase("pepperoni") || flavour.equalsIgnoreCase("vegetarian") || flavour.equalsIgnoreCase("hawaiian") || flavour.equalsIgnoreCase("margherita")) {
             this.flavour = flavour;
         } else { // if not, flavour defaults to cheese
             this.flavour = "cheese";
         }
 
         // crust must be: thin, normal, stuffed
-        if (crust.toLowerCase().equals("thin") || crust.toLowerCase().equals("regular") || crust.toLowerCase().equals("stuffed")) {
+        if (crust.equalsIgnoreCase("thin") || crust.equalsIgnoreCase("regular") || crust.equalsIgnoreCase("stuffed")) {
             this.crust = crust;
         } else { // if not, crust defaults to regular
             this.crust = "regular";
         }
 
         // size must be: slice, small, medium, large , x-large
-        if (size.toLowerCase().equals("slice") || size.toLowerCase().equals("small") || size.toLowerCase().equals("medium") || size.toLowerCase().equals("large") || size.toLowerCase().equals("x-large")) {
+        if (size.equalsIgnoreCase("slice") || size.equalsIgnoreCase("small") || size.equalsIgnoreCase("medium") || size.equalsIgnoreCase("large") || size.equalsIgnoreCase("x-large")) {
             this.size = size;
         } else { // if not, size defaults to medium
             this.size = "medium";

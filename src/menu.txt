@@ -1,0 +1,43 @@
+CATEGORY OF FOOD
+
+#1
+price
+#2
+price
+
+---
+
+PASTA // note: all pasta flavours cost the same
+
+13
+
+
+---
+
+PIZZA // note: all pizza flavours cost the same
+
+small
+8
+medium
+12
+large
+16
+x-large
+22
+
+extra topping
+3
+
+---
+
+BUBBLE TEA // note: all bubble tea flavours cost the same
+
+small
+5
+medium
+6
+large
+7
+
+topping
+0.5

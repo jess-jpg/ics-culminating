@@ -1,8 +1,8 @@
 /**
  * Creates a customizable bubble tea drink.
  * Can choose its:
- * - flavour
- * - toppings
+ * - flavour (original, jasmine, mango, matcha, taro)
+ * - toppings (tapioca, grass jelly, sago)
  * - temperature (hot/cold)
  * - sugar level (0-100%)
  * - ice level (true/false)
@@ -19,7 +19,7 @@ public class BubbleTea extends Drink {
     /** bubble tea flavour */
     private String flavour;
     /** bubble tea topping */
-    private String topping; // tapioca, grass jelly
+    private String topping; // tapioca, grass jelly, sago
 
     /* constructor */
 
@@ -31,7 +31,7 @@ public class BubbleTea extends Drink {
      * Description: Creates a default bubble tea: one iced medium Original flavour with tapioca. reg sugar
      */
     public BubbleTea() {
-        super("Original Milk Tea with Tapioca", 5, false, 1, "reg", true, 'm'); // Drink constructor
+        super("Original Milk Tea with Tapioca", 5, false, 1, "reg", true, "medium"); // Drink constructor
         this.flavour = "original";
         this.topping = "tapioca";
     }
@@ -48,9 +48,17 @@ public class BubbleTea extends Drink {
      * @param size size of bubble tea
      * @param flavour flavour of bubble tea
      */
-    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size, String flavour) {
+    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, String size, String flavour) {
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
-        this.flavour = flavour;
+
+        // flavour must be original, jasmine, mango, matcha or taro
+        if (flavour.equalsIgnoreCase("original") || flavour.equalsIgnoreCase("jasmine") || flavour.equalsIgnoreCase("mango") || flavour.equalsIgnoreCase("matcha") || flavour.equalsIgnoreCase("taro")) {
+            this.flavour = flavour;
+        } else { // if not, flavour defaults to original
+            this.flavour = "original";
+        }
+
+        // no topping
         this.topping = "none";
     }
 
@@ -67,10 +75,22 @@ public class BubbleTea extends Drink {
      * @param flavour flavour of bubble tea
      * @param topping toppings in bubble tea
      */
-    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, char size, String flavour, String topping) {
+    public BubbleTea(String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, String size, String flavour, String topping) {
         super(name, price, hot, quantity, sugarLevel, ice, size); // Drink constructor
-        this.flavour = flavour;
-        this.topping = topping;
+
+        // flavour must be original, jasmine, mango, matcha or taro
+        if (flavour.equalsIgnoreCase("original") || flavour.equalsIgnoreCase("jasmine") || flavour.equalsIgnoreCase("mango") || flavour.equalsIgnoreCase("matcha") || flavour.equalsIgnoreCase("taro")) {
+            this.flavour = flavour;
+        } else { // if not, flavour defaults to original
+            this.flavour = "original";
+        }
+
+        // toppings must be tapioca, grass jelly or sago
+        if (topping.equalsIgnoreCase("tapioca") || topping.equalsIgnoreCase("grass jelly") || topping.equalsIgnoreCase("sago")) {
+            this.topping = topping;
+        } else { // if not, topping defaults to none
+            this.topping = "none";
+        }
     }
 
     /* accessors */
