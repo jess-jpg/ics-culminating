@@ -38,7 +38,9 @@ public class Main {
          numItems += 1;
       }
       else {
-         System.out.println ("Sorry we don't serve that, but this is our menu:");
+         System.out.println ("Sorry we don't serve that, but this is our menu:"); //file read to get the menu data
+         
       }
+      System.out.println(totalPrice);
    }
 }

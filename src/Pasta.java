@@ -8,7 +8,7 @@ public class Pasta extends MenuItem {
    
    //unspecified sauce amount defaults to regular
    public Pasta (String name, int quantity){
-      super (name, 13, quantity);
+      super (name, quantity);
 
       if (name.equalsIgnoreCase("Chicken Alfredo")) {
          this.sauce = "Alfredo";
@@ -24,8 +24,8 @@ public class Pasta extends MenuItem {
    
    }
    
-   public Pasta (String name, double price, int quantity, String sauce, String sauceAmount, String protein, String pastaShape){
-      super (name, price, quantity);
+   public Pasta (String name, int quantity, String sauce, String sauceAmount, String protein, String pastaShape){
+      super (name, quantity);
       this.sauce = sauce;
       this.sauceAmount = sauceAmount;
       this.protein = protein;
@@ -35,7 +35,7 @@ public class Pasta extends MenuItem {
          this.sauce = "Alfredo";
          this.protein = "Chicken";
          this.pastaShape = "Linguine";
-         price = 13.00;
+        
          
       }
    
