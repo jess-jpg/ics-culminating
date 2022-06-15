@@ -16,13 +16,13 @@ Spaghetti and Meatballs
 
 PIZZA // note: all pizza flavours cost the same
 
-small
+small pizza
 8
-medium
+medium pizza
 12
-large
+large pizza
 16
-x-large
+x-large pizza
 22
 
 extra topping
