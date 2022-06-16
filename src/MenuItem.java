@@ -21,6 +21,9 @@ public class MenuItem {
       
       try {
          File f = new File ("Menu.txt");
+
+         System.out.println("TEMP HERE 1"); // temp
+
          FileReader fr = new FileReader(f);
          BufferedReader br = new BufferedReader(fr);
          

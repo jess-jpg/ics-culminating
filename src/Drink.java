@@ -7,8 +7,8 @@ public class Drink extends MenuItem {
    private String size;
    private boolean hot;
    
-   public Drink (String name, double price, boolean hot, int quantity, String sugarLevel, boolean ice, String size){
-      super (name, price, quantity);
+   public Drink (String name, int quantity, boolean hot, String sugarLevel, boolean ice, String size){
+      super (name, quantity);
       this.sugarLevel = sugarLevel;
       this.hot = hot;
       if (!this.hot){

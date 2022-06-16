@@ -1,0 +1,49 @@
+CATEGORY OF FOOD
+
+#1
+price
+#2
+price
+
+---
+
+Chicken Alfredo
+13
+Spaghetti and Meatballs
+12
+
+---
+
+PIZZA // note: all pizza flavours cost the same
+
+small pizza
+8
+medium pizza
+12
+large pizza
+16
+x-large pizza
+22
+
+small pizza with topping
+11
+medium pizza with topping
+15
+large pizza with topping
+19
+x-large pizza with topping
+25
+
+---
+
+BUBBLE TEA // note: all bubble tea flavours cost the same
+
+small
+5
+medium
+6
+large
+7
+
+topping
+0.5

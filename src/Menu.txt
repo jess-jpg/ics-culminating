@@ -25,8 +25,14 @@ large pizza
 x-large pizza
 22
 
-extra topping
-3
+small pizza with topping
+11
+medium pizza with topping
+15
+large pizza with topping
+19
+x-large pizza with topping
+25
 
 ---
 
