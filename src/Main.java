@@ -109,6 +109,8 @@ public class Main {
                      totalPrice = totalPrice + pizza.getPrice();// get price
                      numItems += 1;
 
+                     // file io not wokring? ******* FILE READING CANT READ
+
 
                   }
 

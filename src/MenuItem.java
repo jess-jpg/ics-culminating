@@ -14,16 +14,13 @@ public class MenuItem {
    
    
    /** Constructors */
-   //defualt constructs an order as x1 if unspecified
+   // default constructs an order as x1 if unspecified
    public MenuItem (String name){
       this.name = name;
       this.quantity = 1;
-      
+
       try {
          File f = new File ("Menu.txt");
-
-         System.out.println("TEMP HERE 1"); // temp
-
          FileReader fr = new FileReader(f);
          BufferedReader br = new BufferedReader(fr);
          
@@ -47,13 +44,12 @@ public class MenuItem {
       } catch (IOException e) {
          System.out.println("Cannot read file");
       }
-      
    }
    
    public MenuItem (String name, int quantity){
       this.name = name;
       this.quantity = quantity;
-      
+
       try {
          File f = new File ("Menu.txt");
          FileReader fr = new FileReader(f);
