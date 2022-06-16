@@ -9,7 +9,8 @@ public class Main {
       
       double totalPrice = 0;
       int numItems = 0;
-      
+      boolean orderMore;
+
       System.out.println("Hi Welcome to Fusion! What would you like to order?");
       String order = in.nextLine();
       if (order.equalsIgnoreCase("Pasta")){
@@ -59,25 +60,25 @@ public class Main {
 
                // get pizza crust
                System.out.println("What type of pizza crust would you like?");
-               System.out.println("There is: normal, stuffed, and thin.");
+               System.out.println("There is: thin, regular, and stuffed.");
                crust = in.nextLine();
 
                // only ask for extra topping if crust is valid (normal, stuffed, thin)
                if (crust.equalsIgnoreCase("thin") || crust.equalsIgnoreCase("regular") || crust.equalsIgnoreCase("stuffed")) {
                   // ask if they want extra topping
                   System.out.println("Would you like to add an extra topping onto your pizza?");
-                  System.out.println("The current available toppings are: pepperoni, bacon, and extra cheese");
                   if (in.nextLine().contains("y")) { // yes topping
                      String extraTopping;
 
                      // get pizza extra topping
+                     System.out.println("The current available toppings are: pepperoni, bacon, and extra cheese");
                      System.out.println("What would you like?");
                      extraTopping = in.nextLine();
 
                      if (extraTopping.equalsIgnoreCase("pepperoni") || extraTopping.equalsIgnoreCase("bacon") || extraTopping.equalsIgnoreCase("extra cheese")) {
                         int quantity;
                         // ask for quantity
-                        System.out.print("How many of these pizzas would you like? Please enter a digit: ");
+                        System.out.println("How many of these pizzas would you like?");
                         quantity = in.nextInt();
 
                         // create the pizza
@@ -87,8 +88,8 @@ public class Main {
                         Pizza pizza = new Pizza(name, quantity, flavour, crust, size);
 
                         // get price
-                        totalPrice = totalPrice + pizza.getPrice();// get price
-                        numItems += 1;
+                        totalPrice = totalPrice + pizza.getPrice(); // get price
+                        numItems = numItems + quantity; // add to total items
 
                      } else { // invalid extra topping input
                         System.out.println("Sorry, that is not a valid extra topping.");
@@ -107,32 +108,25 @@ public class Main {
 
                      // get price
                      totalPrice = totalPrice + pizza.getPrice();// get price
-                     numItems += 1;
-
-                     // file io not wokring? ******* FILE READING CANT READ
-
-
+                     numItems = numItems + quantity; // add to total items
                   }
 
                } else { // invalid crust input
                   System.out.println("Sorry, that is not a valid crust type.");
                }
-
             } else { // invalid size input
                System.out.println("Sorry, that is not a valid size.");
             }
-
          } else { // invalid flavour input
             System.out.println("Sorry, that is not a valid flavour.");
          }
-
       }
-
-
       else {
          System.out.println ("Sorry we don't serve that, but this is our menu:"); //file read to get the menu data
-         
       }
       System.out.println(totalPrice);
    }
+
+   //
+
 }

@@ -20,7 +20,7 @@ public class MenuItem {
       this.quantity = 1;
 
       try {
-         File f = new File ("Menu.txt");
+         File f = new File ("src/Menu.txt");
          FileReader fr = new FileReader(f);
          BufferedReader br = new BufferedReader(fr);
          
@@ -51,7 +51,7 @@ public class MenuItem {
       this.quantity = quantity;
 
       try {
-         File f = new File ("Menu.txt");
+         File f = new File ("src/Menu.txt");
          FileReader fr = new FileReader(f);
          BufferedReader br = new BufferedReader(fr);
          
