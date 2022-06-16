@@ -9,7 +9,8 @@ public class Main {
       
       double totalPrice = 0;
       int numItems = 0;
-      boolean orderMore;
+      boolean orderMore = true;
+      
 
       System.out.println("Hi Welcome to Fusion! What would you like to order?");
       String order = in.nextLine();
@@ -37,6 +38,8 @@ public class Main {
          Pasta spagMt = new Pasta ("Spaghetti and Meatballs", 1);
          totalPrice = totalPrice + spagMt.getPrice();//get price
          numItems += 1;
+         
+      //ORDERING PIZZA
       } else if (order.toLowerCase().contains("pizza")) { // pizza
          String flavour;
 
