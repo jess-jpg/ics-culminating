@@ -12,11 +12,16 @@ public class Main {
       boolean orderMore = true;
       
 
-      System.out.println("Hi Welcome to Fusion! What would you like to order? Type FINISH when you're done ordering!");
+      System.out.println("Hi Welcome to Fusion! What would you like to order? Type FINISH when you're done ordering and CANCEL if you'd like to cancel the order!");
       while (orderMore = true){
          String order = in.nextLine();
          if (order.equalsIgnoreCase("finish")){
             orderMore = false;
+         }
+         else if (order.equalsIgnoreCase("cancel")){
+            orderMore = false;
+            totalPrice = 0;
+            System.out.println("Order canceled");
          }
          else if (order.equalsIgnoreCase("Pasta")){
             System.out.println("Would you like Chicken Alfredo or Spaghetti and Meatballs?");
@@ -128,12 +133,11 @@ public class Main {
                System.out.println("Sorry, that is not a valid flavour.");
             }
          }
-         else {
+         else { // display menu if they type invalid order
             System.out.println ("Sorry we don't serve that, but this is our menu:"); //file read to get the menu data
          }
          System.out.println("Your total is: " + totalPrice);
       }
-      
 
    //
    }
