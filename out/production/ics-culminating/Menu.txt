@@ -28,7 +28,7 @@ x-large pizza
 22
 
 slice pizza with topping
-5
+8
 small pizza with topping
 11
 medium pizza with topping

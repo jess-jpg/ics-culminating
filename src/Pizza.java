@@ -5,7 +5,7 @@
  * - flavour (cheese, pepperoni, hawaiian)
  * - crust type (normal, stuffed, thin)
  * - size (slice, small, medium, large , x-large)
- * - toppings. up to 3!
+ * - toppings. up to 1!
  * - quantity bought
  * doc: https://docs.google.com/document/d/16ZgsrNlRkXmWFkHTEPmhlCGocNgx0-H4AAG2QmCvUXI/edit?usp=sharing
  * Course: ICS4U
@@ -153,9 +153,4 @@ public class Pizza extends MenuItem {
     public String getExtraTopping1() {
         return this.extraTopping1;
     }
-
-    /* mutators */
-    // none
-    /* other methods */
-    // none
 }
