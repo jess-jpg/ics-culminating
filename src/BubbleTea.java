@@ -29,7 +29,7 @@ public class BubbleTea extends Drink {
      * @param name name of bubble tea
      * @param quantity amount of bubble tea
      * @param hot temperature of bubble tea
-     * @param sugarLevel sugar level of bubble tea (none, less, reg, extra)
+     * @param sugarLevel sugar level of bubble tea (none, less, regular, extra)
      * @param ice if bubble tea has ice in it (true/false)
      * @param size size of bubble tea
      * @param flavour flavour of bubble tea
@@ -54,7 +54,7 @@ public class BubbleTea extends Drink {
      * @param name name of bubble tea
      * @param quantity amount of bubble tea
      * @param hot temperature of bubble tea
-     * @param sugarLevel sugar level of bubble tea (none, less, reg, extra)
+     * @param sugarLevel sugar level of bubble tea (none, less, regular, extra)
      * @param ice if bubble tea has ice in it (true/false)
      * @param size size of bubble tea
      * @param flavour flavour of bubble tea

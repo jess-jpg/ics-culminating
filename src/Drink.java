@@ -2,7 +2,7 @@
 */
 
 public class Drink extends MenuItem {
-   private String sugarLevel; //none less reg extra
+   private String sugarLevel; //none less regular extra
    private boolean ice; 
    private String size;
    private boolean hot;

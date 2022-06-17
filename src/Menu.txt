@@ -42,12 +42,16 @@ x-large pizza with topping
 
 BUBBLE TEA // note: all bubble tea flavours cost the same
 
-small
+small bubble tea
 5
-medium
-6
-large
+medium bubble tea
+6.50
+large bubble tea
 7
 
-topping
-0.5
+small bubble tea with topping
+5.50
+medium bubble tea with topping
+7.00
+large bubble tea with topping
+7.50
