@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class Main {
 
+   static Scanner sc = new Scanner(System.in);
    static double totalPrice = 0;
    static int numItems = 0;
    static boolean orderMore = true;
 
-   public static void main (String [] args) {
+   public static void main (String[] args) {
       Scanner in = new Scanner (System.in);
 
       System.out.println("Hi Welcome to Fusion! What would you like to order? Type FINISH when you're done ordering and CANCEL if you'd like to cancel the order!");
@@ -44,167 +45,13 @@ public class Main {
             totalPrice = totalPrice + spagMt.getPrice();//get price
             numItems += 1;
 
-<<<<<<< Updated upstream
-            //ORDERING PIZZA
-         } else if (order.toLowerCase().contains("pizza")) { // pizza
-            String flavour;
-
-            // get pizza flavour
-            System.out.println("What flavour of pizza would you like?");
-            System.out.println("There is: cheese, pepperoni, and hawaiian.");
-            flavour = in.nextLine();
-
-            // only ask for size if the flavour is valid (cheese, pepperoni, hawaiian)
-            if (flavour.toLowerCase().contains("cheese") || flavour.toLowerCase().contains("pepperoni") || flavour.toLowerCase().contains("hawaiian")) {
-               String size;
-
-               // get pizza size
-               System.out.println("What size of pizza would you like?");
-               System.out.println("There is: slice, small, medium, large, and x-large.");
-               size = in.nextLine();
-
-               // only ask for crust type if the size is valid (slice, small, medium, large, x-large)
-               if (size.toLowerCase().contains("slice") || size.toLowerCase().contains("small") || size.toLowerCase().contains("medium") || size.toLowerCase().contains("large") || size.toLowerCase().contains("x-large")) {
-                  String crust;
-
-                  // get pizza crust
-                  System.out.println("What type of pizza crust would you like?");
-                  System.out.println("There is: thin, regular, and stuffed.");
-                  crust = in.nextLine();
-
-                  // only ask for extra topping if crust is valid (normal, stuffed, thin)
-                  if (crust.toLowerCase().contains("thin") || crust.toLowerCase().contains("regular") || crust.toLowerCase().contains("stuffed")) {
-                     // ask if they want extra topping
-                     System.out.println("Would you like to add an extra topping onto your pizza?");
-                     if (in.nextLine().contains("y")) { // yes topping
-                        String extraTopping;
-
-                        // get pizza extra topping
-                        System.out.println("The current available toppings are: pepperoni, bacon, and extra cheese");
-                        System.out.println("What would you like?");
-                        extraTopping = in.nextLine();
-
-                        if (extraTopping.toLowerCase().contains("pepperoni") || extraTopping.toLowerCase().contains("bacon") || extraTopping.toLowerCase().contains("extra cheese")) {
-                           int quantity;
-                           // ask for quantity
-                           System.out.println("How many of these pizzas would you like?");
-                           quantity = in.nextInt();
-
-                           // create the pizza
-                           System.out.println("Okay, thanks so much! We will start making your pizza right away.");
-                           String name; // name of pizza, needed for searching price in menu. only takes size and topping
-                           name = size + " pizza with topping";
-                           Pizza pizza = new Pizza(name, quantity, flavour, crust, size);
-
-                           // get price
-                           totalPrice = totalPrice + pizza.getPrice(); // get price
-                           numItems = numItems + quantity; // add to total items
-
-                        } else { // invalid extra topping input
-                           System.out.println("Sorry, that is not a valid extra topping.");
-                        }
-                     } else { // no topping. ask for quantity
-                        int quantity;
-                        // ask for quantity
-                        System.out.print("How many of these pizzas would you like? Please enter a digit: ");
-                        quantity = in.nextInt();
-
-                        // create the pizza
-                        System.out.println("Okay, thanks so much! We will start making your pizza right away.");
-                        String name; // name of pizza, needed for searching price in menu. only takes size and topping
-                        name = size + " pizza";
-                        Pizza pizza = new Pizza(name, quantity, flavour, crust, size);
-
-                        // get price
-                        totalPrice = totalPrice + pizza.getPrice();// get price
-                        numItems = numItems + quantity; // add to total items
-                     }
-                  } else { // invalid crust input
-                     System.out.println("Sorry, that is not a valid crust type.");
-                  }
-               } else { // invalid size input
-                  System.out.println("Sorry, that is not a valid size.");
-               }
-            } else { // invalid flavour input
-               System.out.println("Sorry, that is not a valid flavour.");
-            }
-
-            // ORDERING BUBBLE TEA
-         } else if (order.toLowerCase().contains("bubble tea") || order.toLowerCase().contains("bbt") || order.toLowerCase().contains("boba"))  { // bubble tea
-            String flavour;
-            String topping;
-            String size;
-            String sugarLevel;
-            String iceStr;
-            boolean ice;
-            String hotStr;
-            boolean hot;
-            String quantityStr;
-            int quantity;
-
-            // construct a bubble tea. if the user at any point wants to stop, leave if.
-            flavour = bbtFlavour();
-            if (!(flavour.equals("restart"))) {
-               topping = bbtTopping(); // get topping
-               if (!(topping.equals("restart"))) {
-                  size = bbtSize(); // get size
-                  if (!(size.equals("restart"))) {
-                     sugarLevel = bbtSugarLevel(); // get sugar level
-                     if (!(sugarLevel.equals("restart"))) {
-                        iceStr = bbtIceLevel(); // get ice
-                        if (!(iceStr.equals("restart"))) {
-                           ice = Boolean.parseBoolean(iceStr); // ice in boolean
-                           hotStr = bbtHot(); // get hot
-                           if (!(hotStr.equals("restart"))) {
-                              hot = Boolean.parseBoolean(iceStr); // hot in boolean
-                              quantityStr = itemQuantity(); // get quantity
-                              if (!(quantityStr.equals("remove"))) {
-                                 quantity = Integer.parseInt(quantityStr); // quantity in int
-
-                                 // now all parameters needed to construct a bubble tea are given by user. can now construct a bbt.
-                                 // creating name of drink, needed to look through menu to find price. depends on size and topping
-                                 String name;
-                                 if (topping.equals("none")) {
-                                    name = size + " bubble tea";
-                                 } else {
-                                    name = size + " bubble tea with topping";
-                                 }
-
-                                 // create drink
-                                 System.out.println("Okay, thanks so much! We will start making your bubble tea right away.");
-                                 BubbleTea bubbleTea = new BubbleTea(name, quantity, hot, sugarLevel, ice, size, flavour);
-
-                                 // get price
-                                 totalPrice = totalPrice + bubbleTea.getPrice(); // get price
-                                 numItems = numItems + quantity; // add to total items
-
-                                 System.out.println(name); // TEMP
-                                 System.out.println(bubbleTea.getPrice()); // TEMP
-
-                              }
-                           }
-                        }
-                     }
-                  }
-               }
-            }
-         }
-      }
-   //
-   }
-
-   static Scanner sc = new Scanner(System.in);
-=======
          } else if (order.toLowerCase().contains("pizza")) { //ORDERING PIZZA
             orderPizza();
-         } else if (order.toLowerCase().contains("bubble tea") || order.toLowerCase().contains("bbt") || order.toLowerCase().contains("boba")) { // ORDERING BUBBLE TEA
+         } else if (order.toLowerCase().contains("bubble tea") || order.toLowerCase().contains("bbt") || order.toLowerCase().contains("boba"))  { // ORDERING BUBBLE TEA
             orderBubbleTea();
          }
       }
-
    }
-
-   static Scanner sc = new Scanner(System.in);
 
    /* ordering item methods */
 
@@ -511,7 +358,6 @@ public class Main {
    }
 
    /* getting bubble tea parameter methods */
->>>>>>> Stashed changes
 
    /**
     * Name: bbtFlavour
