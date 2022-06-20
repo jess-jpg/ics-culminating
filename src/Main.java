@@ -153,9 +153,9 @@ public class Main {
                         iceStr = bbtIceLevel(); // get ice
                         if (!(iceStr.equals("restart"))) {
                            ice = Boolean.parseBoolean(iceStr); // ice in boolean
-                           hotStr = bbtHot(); // get hot
-                           if (!(hotStr.equals("restart"))) {
-                              hot = Boolean.parseBoolean(iceStr); // hot in boolean
+
+                           // only ask for if drink is hot if there is no ice
+                           if (ice) { // ice is true = cannot be hot
                               quantityStr = itemQuantity(); // get quantity
                               if (!(quantityStr.equals("remove"))) {
                                  quantity = Integer.parseInt(quantityStr); // quantity in int
@@ -171,15 +171,38 @@ public class Main {
 
                                  // create drink
                                  System.out.println("Okay, thanks so much! We will start making your bubble tea right away.");
-                                 BubbleTea bubbleTea = new BubbleTea(name, quantity, hot, sugarLevel, ice, size, flavour);
+                                 BubbleTea bubbleTea = new BubbleTea(name, quantity, false, sugarLevel, ice, size, flavour);
 
                                  // get price
                                  totalPrice = totalPrice + bubbleTea.getPrice(); // get price
                                  numItems = numItems + quantity; // add to total items
+                              }
+                           } else { // ice is false = drink could be hot
+                              hotStr = bbtHot(); // get hot
+                              if (!(hotStr.equals("restart"))) {
+                                 hot = Boolean.parseBoolean(iceStr); // hot in boolean
+                                 quantityStr = itemQuantity(); // get quantity
+                                 if (!(quantityStr.equals("remove"))) {
+                                    quantity = Integer.parseInt(quantityStr); // quantity in int
 
-                                 System.out.println(name); // TEMP
-                                 System.out.println(bubbleTea.getPrice()); // TEMP
+                                    // now all parameters needed to construct a bubble tea are given by user. can now construct a bbt.
+                                    // creating name of drink, needed to look through menu to find price. depends on size and topping
+                                    String name;
+                                    if (topping.equals("none")) {
+                                       name = size + " bubble tea";
+                                    } else {
+                                       name = size + " bubble tea with topping";
+                                    }
 
+                                    // create drink
+                                    System.out.println("Okay, thanks so much! We will start making your bubble tea right away.");
+                                    BubbleTea bubbleTea = new BubbleTea(name, quantity, hot, sugarLevel, ice, size, flavour);
+
+                                    // get price
+                                    totalPrice = totalPrice + bubbleTea.getPrice(); // get price
+                                    numItems = numItems + quantity; // add to total items
+                                    
+                                 }
                               }
                            }
                         }
@@ -242,7 +265,7 @@ public class Main {
          topping = sc.nextLine();
 
          // checking for valid input / restart
-         if (!(topping.toLowerCase().contains("tapioca") || topping.toLowerCase().contains("grass jelly") || topping.toLowerCase().contains("sago")) || topping.toLowerCase().contains("none")) { // invalid topping
+         if (!(topping.toLowerCase().contains("tapioca") || topping.toLowerCase().contains("grass jelly") || topping.toLowerCase().contains("sago") || topping.toLowerCase().contains("none"))) { // invalid topping
             validInput = false;
             System.out.println("This is not a valid topping.");
             System.out.println("If you would like to restart ordering, please type 'restart'. Otherwise, please enter a valid topping.");
@@ -335,10 +358,10 @@ public class Main {
          // split into yes or no ice. asks for temperature if no ice
          if (iceLevel.toLowerCase().startsWith("y")) { // yes ice
             validInput = true;
-            iceLevel = "yes";
+            iceLevel = "true";
          } else if (iceLevel.toLowerCase().startsWith("n")) { // no ice
             validInput = true;
-            iceLevel = "no";
+            iceLevel = "false";
          } else if (iceLevel.toLowerCase().contains("restart")) { // restart ordering
             validInput = true;
             iceLevel = "restart";
@@ -369,10 +392,10 @@ public class Main {
          // check for temperature. change string back to boolean in main method
          if (hot.toLowerCase().startsWith("y")) { // yes hot
             validInput = true;
-            hot = "yes";
+            hot = "true";
          } else if (hot.toLowerCase().startsWith("n")) { // not not
             validInput = true;
-            hot = "no";
+            hot = "false";
          } else if (hot.toLowerCase().contains("restart")) { // restart ordering
             validInput = true;
             hot = "restart";
@@ -399,7 +422,7 @@ public class Main {
       boolean validInput;
 
       // get quantity
-      System.out.println("How many would you like?");
+      System.out.println("How many of this item would you like to order?");
       // repeat until quantity is not 0, or the user does not want to order the item anymore.
       do {
          quantity = sc.nextLine();

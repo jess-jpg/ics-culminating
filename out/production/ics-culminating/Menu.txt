@@ -45,13 +45,13 @@ BUBBLE TEA // note: all bubble tea flavours cost the same
 small bubble tea
 5
 medium bubble tea
-6.50
+6.5
 large bubble tea
 7
 
 small bubble tea with topping
-5.50
+5.599
 medium bubble tea with topping
-7.00
+799
 large bubble tea with topping
-7.50
+7.599

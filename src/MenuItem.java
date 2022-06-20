@@ -62,8 +62,8 @@ public class MenuItem {
          //while there are more lines to read
          while ((line = br.readLine()) != null) {
             //using the text nuances to find my data
-            if (line.contains(this.name)) {
-               this.price = Double.parseDouble(br.readLine());
+            if (line.equals(this.name)) {
+               this.price = Double.parseDouble(br.readLine()) * this.quantity; // look for price in the text file, multiply by how many the user wants to buy
             }
          }
          br.close();
