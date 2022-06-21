@@ -22,16 +22,16 @@ public class Drink extends MenuItem {
    
     /* constructor */
 
-    /**
-     * Name: Drink
-     * Description: Creates a drink
-     * @param name name of drink
-     * @param quantity amount of drink
-     * @param hot temperature of drink
-     * @param sugarLevel sugar level of drink (none, less, regular, extra)
-     * @param ice if drink has ice in it (true/false)
-     * @param size size of drink
-     */
+   /**
+    * Name: Drink
+    * Description: Creates a drink
+    * @param name name of drink
+    * @param quantity amount of drink
+    * @param hot temperature of drink
+    * @param sugarLevel sugar level of drink (none, less, regular, extra)
+    * @param ice if drink has ice in it (true/false)
+    * @param size size of drink
+   */
    public Drink (String name, int quantity, boolean hot, String sugarLevel, boolean ice, String size){
       super (name, quantity); // from menuItem
       this.sugarLevel = sugarLevel;
