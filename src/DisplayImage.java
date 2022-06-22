@@ -1,7 +1,7 @@
 /**
 Sophia Wang
 june 21
-class to display image -- the menu for our culminating
+class to display the menu png for our culminating
 */
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -13,7 +13,7 @@ import java.io.IOException;
 public class DisplayImage {
    public static void main(String[] args) throws IOException {
    
-      File file = new File("C:\\Users\\sophi\\Downloads\\MealsResized.png");
+      File file = new File("C:\\Users\\sophi\\Downloads\\MealsResized.png"); //Change path to work !!
       BufferedImage bufferedImage = ImageIO.read(file);
       
       ImageIcon imageIcon = new ImageIcon(bufferedImage);
