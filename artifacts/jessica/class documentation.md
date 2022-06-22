@@ -1,3 +1,9 @@
+**Classes I coded**
+- Main (with Sophia)
+- MenuItem (with Sophia)
+- BubbleTea
+- Pizza
+
 **Which file to check for commenting and documentation**
 - Pizza class OR
 - Main class (pizza and bubble tea ordering sections. there are many, many separate methods used to organize the process. The Main class also has a lot more code than Pizza).
