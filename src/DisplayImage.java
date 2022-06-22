@@ -13,7 +13,7 @@ import java.io.IOException;
 public class DisplayImage {
    public static void main(String[] args) throws IOException {
    
-      File file = new File("C:\\Users\\sophi\\Downloads\\MealsResized.png"); //Change path to work !!
+      File file = new File("src\\ResizedMenu.png"); //Change path to work !!
       BufferedImage bufferedImage = ImageIO.read(file);
       
       ImageIcon imageIcon = new ImageIcon(bufferedImage);
